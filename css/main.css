@@ -140,28 +140,17 @@ body > section,
 	Header
 ==========================================*/
 .jumbotron {
-    background-image: url("bluecode1.png");
+    background-image: url("bluecode5.png");
     background-size: 100% 100%;
     height: 500px;
     padding-top: 0;
     padding-bottom: 8%;
 }
 
-@media (max-width: 850px)
-{
-    .jumbotron {
-        background-image: url("bluecode2.png");
-        background-size: 100% 100%;
-        height: 500px;
-        padding-top: 0;
-        padding-bottom: 8%;
-    }
-}
-
 @media (max-width: 630px)
 {
     .jumbotron {
-        background-image: url("bluecode4.png");
+        background-image: url("bluecode5.png");
         background-size: 100% 100%;
         height: 400px;
         padding-top: 8%;
@@ -172,7 +161,7 @@ body > section,
 @media (max-width: 350px)
 {
     .jumbotron {
-        background-image: url("bluecode4.png");
+        background-image: url("bluecode5.png");
         background-size: 100% 100%;
         height: 400px;
         padding-top: 8%;
