@@ -139,6 +139,54 @@ body > section,
 /*=========================================
 	Header
 ==========================================*/
+.jumbotron {
+    background-image: url("bluecode1.png");
+    background-size: 100% 100%;
+    height: 500px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 850px)
+{
+    .jumbotron {
+        background-image: url("bluecode2.png");
+        background-size: 100% 100%;
+        height: 500px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 630px)
+{
+    .jumbotron {
+        background-image: url("bluecode3.png");
+        background-size: 100% 100%;
+        height: 500px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 350px)
+{
+    .jumbotron {
+        background-image: url("bluecode4.png");
+        background-size: 100% 100%;
+        height: 500px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 
 #navigation {
   background-color: #00004d/*#600080*/;
@@ -405,6 +453,27 @@ body > section,
     top:0;
 }
 
+.mainpage1 {
+    font-size: 40px;
+    color: black;
+    padding-left: 10%;
+    text-align: left;
+}
+
+.mainpage2{
+    font-size: 40px;
+    color: black;
+    padding-right: 10%;
+    text-align: right;
+}
+
+.mainpage3{
+    font-size: 40px;
+    color: black ;
+    text-align: center ;
+}
+
+
 .breadcrumb li a {
     overflow: hidden;
     font-size: 13px;
@@ -426,7 +495,7 @@ body > section,
 }
 
 
-.h1 {
+.h1{
     font-size: 40px;
     color: #07223F ;
     text-shadow: 10px;
