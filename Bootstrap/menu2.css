@@ -1,0 +1,16 @@
+.a-btn{
+    color:#F0FFFF;
+    float:left;
+     transition: all 0.2s linear;
+}
+
+
+
+.a-btn:hover{
+    transform: scale(1.2);
+    text-decoration: none;
+}
+.a-btn:hover .a-btn-symbol{
+    
+    transform: rotate(360deg);
+}
