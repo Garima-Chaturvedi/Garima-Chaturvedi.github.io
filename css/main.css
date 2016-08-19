@@ -145,10 +145,9 @@ body > section,
     height: 500px;
     padding-top: 0;
     padding-bottom: 8%;
-    margin-top:-2%;
-    margin-bottom:8%;
 }
 
+/*
 @media (max-width: 630px)
 {
     .jumbotron {
@@ -174,7 +173,7 @@ body > section,
     margin-bottom:0;
     }
 }
-
+*/
 #navigation {
   background-color: #00004d/*#600080*/;
   border: 0 none;
