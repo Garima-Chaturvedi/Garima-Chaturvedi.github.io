@@ -105,17 +105,17 @@
                 if ($("#toggle-btn").hasClass("nav-close")) {
                     $("#toggle-btn").find(".nav-close").remove("nav-close");
                     $("#toggle-btn").addClass("nav-open");
-                    $("#menu1, #menu2").toggle();
+                    $("#menu1").toggle();
                 }
                 else {
                     $("#toggle-btn").find(".nav-open").remove("nav-open");
                     $("#toggle-btn").addClass("nav-close");
-                    $("#menu1, #menu2").hide();
+                    $("#menu1").hide();
                 }
             });
 
             $(window).resize(function() {
-                $("#menu1, #menu2").show();
+                $("#menu1").show();
 
             });
         </script>
@@ -128,15 +128,7 @@
             });
         </script>
 
-        <script>
-            $(".nav b").on("click", function(){
-                $(".icon-bar").find(".active").removeClass("active");
-                $(this).parent().addClass("active");
-            });
-        </script>
         <!-- For active tab change in navbar-- END -->
-
-        <!-- To change the color of the background as per the values-- END-->
 
         <script src="js/custom.js"></script>
 
