@@ -13,7 +13,6 @@
 @media (max-width: 1024px)
 {
     .jumbotron {
-		background-image: url("Image6.JPG");
 		background-attachment: fixed;
 		background-size: cover;
 		height: 650px;
