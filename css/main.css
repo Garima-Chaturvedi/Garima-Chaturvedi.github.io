@@ -10,16 +10,6 @@
     height: 650px;
 }
 
-@media (max-width: 1024px)
-{
-    .jumbotron {
-		background-attachment: fixed;
-		background-size: cover;
-		height: 650px;
-		margin-top:10px;
-	}
-}
-
 @media (max-width: 767px) {
 	.jumbotron {
 		background-image: url("Image5.JPG");
