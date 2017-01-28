@@ -210,9 +210,10 @@
 		margin-right:0px;
 	}
 	.jumbotron {
-        background-image: url("Image6.JPG");
-        background-attachment: fixed;
-        background-size: cover;
+		background-image: url("Image6.JPG");
+		background-attachment: fixed;
+		background-size: cover;
+		height: 650px;
 		margin-top:10px;
 	}
 }
@@ -234,6 +235,9 @@
     top:0;
 }
 
+.faqspane {
+	padding-top: 35px;
+}
 
 .h1{
     font-size: 40px;
