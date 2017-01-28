@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Garima's Resume</title>
+        <title>Introduction</title>
         <meta name="description" content="Personal Website">
         <meta name="keywords" content="SQL, Java, Python, Javascript, Teradata, MySQL, R, Android SDK, Apache Solr, AWS, Kafka, Cassandra, Apache Spark">
         <meta name="author" content="Garima Chaturvedi">
@@ -125,6 +125,13 @@
             $(".nav a").on("click", function(){
                 $(".nav").find(".active").removeClass("active");
                 $(this).parent().addClass("active");
+				
+				if($("#toggle-btn").hasClass("nav-open"))
+				{
+					$("#toggle-btn").remove("nav-open");
+                    $("#toggle-btn").addClass("nav-close");
+                    $("#menu1").hide();
+				}
             });
         </script>
 

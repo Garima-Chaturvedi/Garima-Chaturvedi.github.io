@@ -71,7 +71,7 @@
 				
                 <div class="collapse navbar-collapse collapse nav">
                     <div class="nav-right" id="menu1">
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right" id="menuul">
                             <li class="active"><a id="nv1" target="_top" href="#home">Home</a></li>
                             <li ><a id="nv2" href="#about">About</a></li>
                             <li ><a id="nv3" href="#projects">Projects</a></li>
@@ -142,7 +142,7 @@
 				<div class="col-md-4 tab2">
 					<a target="_blank" href="https://github.com/Garima-Chaturvedi/Handwritten-Digit-Recognition-using-Neural-Networks"><i class="fa fa-pencil-square-o" id="fa-id" aria-hidden="true"></i></a>
 					<h2 id="h2_id"> <b>Handwritten Digit Recognition</b> </h2>
-					<h4 class="h3-4"><i>Developed Neural Networks Logistic Regression, Multi-Class Logistic Regression on MNIST dataset to train the system to identify the digit from a given image. Achieved over 90% accuracy in recognising new images.</i>
+					<h4 class="h3-4"><i>Developed Neural Networks Logistic Regression, Multi-Class Logistic Regression on MNIST dataset to train the system to identify the digit from a given image. Achieved over 90% accuracy in recognizing new images.</i>
 					</h4>
 				</div>
 				
@@ -267,14 +267,14 @@
         <script>
             $("#toggle-btn").on("click", function () {
                 if ($("#toggle-btn").hasClass("nav-close")) {
-                    $("#toggle-btn").find(".nav-close").remove("nav-close");
+                    $("#toggle-btn").remove("nav-close");
                     $("#toggle-btn").addClass("nav-open");
                     $("#menu1").toggle();
                 }
                 else {
-                    $("#toggle-btn").find(".nav-open").remove("nav-open");
+                    $("#toggle-btn").remove("nav-open");
                     $("#toggle-btn").addClass("nav-close");
-                    $("#menu1").hide();
+                    ("#menu1").hide();
                 }
             });
 
@@ -289,12 +289,62 @@
             $(".nav a").on("click", function(){
                 $(".nav").find(".active").removeClass("active");
                 $(this).parent().addClass("active");
+				
+				if($("#toggle-btn").hasClass("nav-open"))
+				{
+					$("#toggle-btn").remove("nav-open");
+                    $("#toggle-btn").addClass("nav-close");
+                    $("#menu1").hide();
+				}
             });
+        </script>
+		
+		<script>
+		// Cache selectors
+			var lastId,
+				topMenu = $("#menuul"),
+				topMenuHeight = topMenu.outerHeight()+15,
+				// All list items
+				menuItems = topMenu.find("a"),
+				// Anchors corresponding to menu items
+				scrollItems = menuItems.map(function(){
+				  var item = $($(this).attr("href"));
+				  if (item.length) { return item; }
+				});
+
+
+			// Bind to scroll
+			$(window).scroll(function(){
+			   // Get container scroll position
+			   var fromTop = $(this).scrollTop()+topMenuHeight;
+			   
+			   // Get id of current scroll item
+			   var cur = scrollItems.map(function(){
+				 if ($(this).offset().top < fromTop)
+				   return this;
+			   });
+			   // Get the id of the current element
+			   cur = cur[cur.length-1];
+			   var id = cur && cur.length ? cur[0].id : "";
+			   
+			   if($(window).scrollTop() + $(window).height() >= $(document).height()-1) {
+				   menuItems
+					 .parent().removeClass("active")
+					 .end().filter("[href='#"+"contact"+"']").parent().addClass("active");
+			    }
+			   
+			   else if (lastId !== id) {
+				   lastId = id;
+				   // Set/remove active class
+				   menuItems
+					 .parent().removeClass("active")
+					 .end().filter("[href='#"+id+"']").parent().addClass("active");
+			   }        
+ 
+			});
         </script>
 
 		
-
-</script>
         <!-- For active tab change in navbar-- END -->
 
         <!-- To change the color of the background as per the values-- END-->
