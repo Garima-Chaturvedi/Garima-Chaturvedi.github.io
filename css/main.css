@@ -10,6 +10,27 @@
     height: 650px;
 }
 
+@media (max-width: 1024px)
+{
+    .jumbotron {
+		background-image: url("Image6.JPG");
+		background-attachment: fixed;
+		background-size: cover;
+		height: 650px;
+		margin-top:10px;
+	}
+}
+
+@media (max-width: 767px) {
+	.jumbotron {
+		background-image: url("Image5.JPG");
+		background-attachment: fixed;
+		background-size: cover;
+		height: 350px;
+		margin-top: 10px;
+	}
+}
+
 .mainpage1 {
     font-size: 30px;
     color: white;
@@ -198,23 +219,6 @@
 	{
 		/*background-color: #ff4d4d;*/
 		margin-right:0px;
-	}
-	.jumbotron {
-		background-image: url("Image6.JPG");
-		background-attachment: fixed;
-		background-size: cover;
-		height: 650px;
-		margin-top:10px;
-	}
-}
-
-@media (max-width: 767px) {
-	.jumbotron {
-		background-image: url("Image5.JPG");
-		background-attachment: fixed;
-		background-size: cover;
-		height: 350px;
-		margin-top: 10px;
 	}
 }
 
