@@ -18,21 +18,13 @@
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-        <script src="http://code.highcharts.com/highcharts.js" type="text/javascript"></script>
-        <script src="http://code.highcharts.com/modules/exporting.js" type="text/javascript"></script>
-
-
         <!-- CSS
         ================================================== -->
+		<!-- Twitter Bootstrap css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!-- Twitter Bootstrap css -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- jquery.fancybox  -->
-        <link rel="stylesheet" href="css/jquery.fancybox.css">
-        <!-- animate -->
-        <link rel="stylesheet" href="css/animate.css">
+ 
         <!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/normalize.min.css">
@@ -42,10 +34,8 @@
         <!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-        <script type="text/javascript" src="Bootstrap/jquery-2.2.0.min.js"></script>
         <script type="text/javascript" src="Bootstrap/bootstrap.min.js"></script>
         <script type="text/javascript" src="Bootstrap/bootstrap.js"></script>
-        <script type="text/javascript" src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 
     </head>
     <body>
@@ -140,17 +130,17 @@
                 if ($("#toggle-btn").hasClass("nav-close")) {
                     $("#toggle-btn").find(".nav-close").remove("nav-close");
                     $("#toggle-btn").addClass("nav-open");
-                    $("#menu1, #menu2").toggle();
+                    $("#menu1").toggle();
                 }
                 else {
                     $("#toggle-btn").find(".nav-open").remove("nav-open");
                     $("#toggle-btn").addClass("nav-close");
-                    $("#menu1, #menu2").hide();
+                    $("#menu1").hide();
                 }
             });
 
             $(window).resize(function() {
-                $("#menu1, #menu2").show();
+                $("#menu1").show();
 
             });
         </script>
@@ -163,20 +153,9 @@
             });
         </script>
 
-        <script>
-            $(".nav b").on("click", function(){
-                $(".icon-bar").find(".active").removeClass("active");
-                $(this).parent().addClass("active");
-            });
-        </script>
         <!-- For active tab change in navbar-- END -->
 
-        <!-- To change the color of the background as per the values-- END-->
-
         <script src="js/custom.js"></script>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
