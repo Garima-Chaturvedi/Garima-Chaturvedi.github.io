@@ -327,19 +327,20 @@
 			   cur = cur[cur.length-1];
 			   var id = cur && cur.length ? cur[0].id : "";
 			   
-			   if($(window).scrollTop() + $(window).height() >= $(document).height()-1) {
-				   menuItems
-					 .parent().removeClass("active")
-					 .end().filter("[href='#"+"contact"+"']").parent().addClass("active");
-			    }
-			   
-			   else if (lastId !== id) {
+			   if (lastId !== id) {
 				   lastId = id;
 				   // Set/remove active class
 				   menuItems
 					 .parent().removeClass("active")
 					 .end().filter("[href='#"+id+"']").parent().addClass("active");
 			   }
+                
+               if($(window).scrollTop() + $(window).height() >= $(document).height()-1) {
+				   menuItems
+					 .parent().removeClass("active")
+					 .end().filter("[href='#"+"contact"+"']").parent().addClass("active");
+                    lastId='contact'
+			    }
  
 			});
         </script>
